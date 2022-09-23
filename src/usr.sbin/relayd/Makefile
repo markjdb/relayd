@@ -50,7 +50,7 @@ CFLAGS+=	-I${.CURDIR} -I${.CURDIR}/../../lib/libutil \
 		-I${.CURDIR}/../../../libevent
 CLEANFILES+=	y.tab.h
 
-LDADD=		-lmd -L${PREFIX}/lib ${LIBEVENT} -lssl -lcrypto
+LDADD=		-L${PREFIX}/lib ${LIBEVENT} -lssl -lcrypto -lmd
 DPADD=		${LIBEVENT} ${LIBSSL} ${LIBCRYPTO}
 
 .include <bsd.prog.mk>
